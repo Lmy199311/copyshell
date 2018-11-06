@@ -1,0 +1,29 @@
+passwd=123456
+SH=ssh -n
+SH_ARG=
+CP=scp
+ServiceListFile=$HOME/shell/list
+MenuFile=$HOME/shell/console.menu
+BackupListFile=$HOME/shell/backup.list
+=
+BasePath=$HOME/
+#SanPath=$HOME/san/
+LocalBasePath=$HOME/
+LocalShellPath=$HOME/shell/
+LocalObjectPath=$HOME/cfg/run/
+LocalConfigPath=$HOME/cfg/config/
+LocalTempPath=/tmp/
+CurrentVersion=option
+CheckVersion=true
+ConfigServices=cfg tmdb
+
+LocalBackupPath=$HOME/backup/
+
+#set oracle environment
+ORACLE_BASE=/home/option1/tools
+ORACLE_HOME=/home/option1/tools/instantclient_11_1
+NLS_LANG=American_America.zhs16gbk
+LD_LIBRARY_PATH=/home/option1/tools/instantclient_11_1:/lib:/usr/lib::./
+SHLIB_PATH=$ORACLE_HOME:./
+OCI_PATH=/home/option1/tools/instantclient_11_1
+TNS_ADMIN=/home/option1/tools/instantclient_11_1 

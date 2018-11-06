@@ -1,0 +1,5 @@
+#格式：进程名　备份文件列表
+#all表示对所有list中的进程处理
+#备份文件名可用通配符
+
+#tkernel1 flow/TradeSeries.con bin/tkernel.ini

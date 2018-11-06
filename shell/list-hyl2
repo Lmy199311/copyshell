@@ -1,0 +1,30 @@
+compositor 1 @starttime
+arb
+tkernel 1
+qkernel	1
+okernel	1
+#dbmt
+#tmdb
+#tinit
+front 1
+front 2
+front 3
+offermanager 1 
+offermanager 2 
+#bankmanager 1
+#shfemdserver 013701 SHFE 0137 0137c2c 1 1
+#shfeoffer  013701 SHFE 0137 0137c2c 1 1
+#shfeoffer  013702  SHFE 0137 0137cac 1 1
+
+#ftdslog 1
+
+#cffexoffer 1 CFFEX 2175 217501 1 1
+#cffexoffer 2 CFFEX 2175 217502 1 1
+#cffexoffer 3 CFFEX 2071 207101 1 1
+#ffexmdserver 1 CFFEX 2175 217501 1 1
+
+#cffexoffer 1 CFFEX 2158 215801 1 1
+#cffexoffer 2 CFFEX 2158 215802 2 1
+#ffexmdserver 1 CFFEX 2158 215801 1 1
+
+#qkernel 2

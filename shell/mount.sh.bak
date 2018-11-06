@@ -1,0 +1,72 @@
+#!/bin/sh
+#wang.xiping modified 20070728
+
+printf "NGES Trade system product mount\n\n"
+
+if [ $# -lt 1 ]
+then
+	printf "Please input product filename[prod.tar]:"
+	read -r ResourceFile
+	if [ "$ResourceFile" = "" ]
+	then
+		ResourceFile="prod.tar"
+	fi
+else
+	ResourceFile=$1
+fi
+
+BasePath=`pwd`
+AllPathResourceFile=$BasePath/$ResourceFile
+
+if [ ! -r $AllPathResourceFile ]
+then
+	echo Error:$AllPathResourceFile can not open!
+	return
+fi
+	
+if [ $# -lt 2 ]
+then
+	CurrentVersion=`getcfg.sh CurrentVersion`
+	printf "Please input product Version[%s]:" $CurrentVersion
+	read -r CurrentVersion
+	if [ "$CurrentVersion" = "" ]
+	then
+		CurrentVersion=`getcfg.sh CurrentVersion`
+	fi
+else
+	CurrentVersion=$2
+fi
+
+LocalObjectPath=`getcfg.sh LocalObjectPath`
+if [ "$LocalObjectPath" = "" ]
+then
+	echo Error: LocalObjectPath not set
+fi
+setcfg.sh CurrentVersion $CurrentVersion
+
+mkdir ${LocalObjectPath}${CurrentVersion} 2>/dev/null
+cd ${LocalObjectPath}${CurrentVersion} 2>/dev/null
+
+tar xvf $AllPathResourceFile
+
+echo "Config Server Local mounted!"
+
+SH=`getcfg.sh SH`
+CP=`getcfg.sh CP`
+ConfigServices=`getcfg.sh ConfigServices`
+echo ConfigService:$ConfigServices
+for ConfigService in $ConfigServices
+do
+echo ... $ConfigService
+	rm -f /tmp/cfg.cp 2> /dev/null
+	$SH $ConfigService echo ">" /tmp/cfg.cp
+	if [ ! -r /tmp/cfg.cp ]
+	then
+		echo "mount for config:" $ConfigService
+		$CP $AllPathResourceFile $ConfigService:.
+		$SH $ConfigService ${BasePath}shell/mount.sh $ResourceFile $CurrentVersion
+	fi
+done
+rm -f /tmp/cfg.cp 2> /dev/null
+
+

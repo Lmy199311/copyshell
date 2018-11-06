@@ -1,0 +1,32 @@
+
+compositor 1 
+arb
+tkernel 1
+qkernel	1
+dbmt 1
+tmdb 1
+#tinit
+tinit csv
+drmt 1
+drmt 2
+front 1
+front 2
+offermanager 1 
+#shfemdserver 1 SHFE 0004 0004cac 1 1
+#shfemdserver 1 SHFE 0075 0075zcl 1 1
+#shfemdserver 2 SHFE 0007 0007jz2 2 2
+#shfeoffer  2 SHFE 0007 0007jz2 2 2
+shfeoffer    1 SHFE 0009 0009c3c 1 1
+shfemdserver 1 SHFE 0009 0009c3c 1 1
+
+#ffexmdserver 1 CFFEX 2032 203201 1 1
+#cffexoffer  1 CFFEX 2032 203201 1 1
+#ffexmdserver 2 CFFEX 2032 203201 2 1 
+#cffexoffer  2 CFFEX 2032 203201 2 1 
+#ineoffer 1 INE 0001 0001cac 1 1
+#inemdserver 1 INE 0001 0001cac 1 1
+
+#zceoffer     1 CZCE 0081 00810090 1 1
+#zcemdserver  1 CZCE 0081 00810090 1 1
+#zceoffer     2 CZCE 0081 00810090 2 1
+#zcemdserver  2 CZCE 0081 00810090 2 1

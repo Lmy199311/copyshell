@@ -1,0 +1,14 @@
+
+front 1
+front 2
+compositor 1
+arb 
+tkernel 1
+qkernel 1
+okernel 1
+offermanager 1
+tinit
+dbmt
+tmdb
+shfemdserver 1 SHFE 0008 0008001 1 1
+shfeoffer  1 SHFE 0008 0008001 1 1

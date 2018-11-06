@@ -1,0 +1,12 @@
+检查服务设置,checkhost.sh,检查服务别名配置与报盘配置
+启动全部服务,startall.sh,启动全部服务
+显示运行情况,showall.sh, 显示交易组件各进程的运行情况
+关闭全部服务,stopall.sh,关闭全部服务
+程序及配置发布,console.sh child.menu,thie a test prog
+交易峰值统计,tview.sh,分别按分钟、5秒统计交易峰值的情况
+合约属性检查,showid.sh,检查合约的保证金率、涨跌板率、最小下单数
+初始行情检查,checkmd.sh,检查初始行情是否与上一交易日公布行情一致
+收盘检查,checkclose.sh,检查交易引擎中报单、成交及行情是否及时写入数据库
+建立基本目录,ecall.sh mkbasepath,基本各服务进程依赖的基本工作目录
+test,echo test test ,etyfewrwqepe
+asdasdfsa,echo this it a test,test

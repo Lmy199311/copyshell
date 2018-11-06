@@ -1,0 +1,9 @@
+        cntexpr=`wc -l list |awk '{print $1}'`
+        cnt=`expr $cntexpr`
+i=0
+        while [ $i -lt $cnt ]
+        do
+                i=`expr $i + 1 `
+                read srv 
+                echo $i $1 $srv 
+        done < list

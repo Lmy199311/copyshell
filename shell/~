@@ -1,0 +1,21 @@
+compositor 1 
+arb
+tkernel 1
+qkernel	1
+okernel	1
+dbmt
+tmdb
+#tinit 20130620 1
+tinit
+front 1
+front 2
+offermanager 1 
+shfemdserver 1 SHFE 0252 0252cac 1 1
+shfeoffer  1 SHFE 0252 0252cac 1 1
+
+ffexmdserver 1 CFFEX 2215 221501 1 1
+cffexoffer  1 CFFEX 2215 221501 1 1
+ffexmdserver 2 CFFEX 2215 221501 2 1
+cffexoffer  2 CFFEX 2215 221501 2 1
+#ineoffer 1 INE 0005 0005c2c 1 1
+#inemdserver 1 INE 0005 0005c2c 1 1
